@@ -101,89 +101,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://lovey.kikiw.cn/Style/css/index.css">
-
-
 <div id="pjax-container">
-<div>
-    <!-- 时间区域 -->
-    <div class="time">
-        <p id="daysPassed">Loading...</p>
-<p>
- ⠀⠀⠀⠀⠀<br>
-</p>
-<link rel="stylesheet" href="styles.css">
+    <div class="central">
+        <div class="title">
+            <h1>总有些惊奇的际遇 比方说当我遇见你</h1>
+        </div>
+        <div class="row central central-6">
 
-
-<script>
-    // 定义目标日期
-    var targetDate = new Date('2024-05-09');
-
-    // 获取当前日期
-    var currentDate = new Date();
-
-    // 如果目标日期在当前日期之后，显示负数
-    if (targetDate > currentDate) {
-        document.getElementById('daysPassed').textContent = '2024年5月8日还未到来';
-    } else {
-        // 计算两个日期之间的毫秒数差异
-        var diff = currentDate - targetDate;
-
-        // 将毫秒转换为天数
-        var daysPassed = Math.ceil(diff / (1000 * 60 * 60 * 24));
-
-        // 显示结果
-        document.getElementById('daysPassed').
-
- 
- textContent = daysPassed + '天了';
-    } 
-</script>
-</div>
-    </div>
-    <!-- 卡片区域 -->
-    <div class="card-wrap">
-        <div class="row central">
-            <div class="card col-lg-4 col-sm-12 col-sm-x-12 flex-h">
-                <img src="https://lovey.kikiw.cn/Style/img/diandian.png" alt="" class="spotlight">
-                <div class="text">
-                    <span><a target="_self" href="https://liulovyang.github.io/writeing">点点滴滴</a></span>
-                    <p>记录你我生活</p>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-sm-12 col-sm-x-12 flex-h">
-                <img src="https://lovey.kikiw.cn/Style/img/liuyan.png" alt="" class="spotlight">
-                <div class="text">
-                    <span><a target="_self" href="https://liulovyang.github.io/writing">留言板</a></span>
-                    <p>写下留言祝福</p>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-sm-12 col-sm-x-12 flex-h">
-                <img src="https://lovey.kikiw.cn/Style/img/about.png" alt="" class="spotlight">
-                <div class="text">
-                    <span><a target="_self" href="https://liulovyang.gitHub.io/writeing">关于我们</a></span>
-                    <p>我们的经历</p>
-                </div>
-            </div>
-            <div class="card-b col-lg-6 col-12 col-sm-12 flex-h">
-                <img src="https://lovey.kikiw.cn/Style/img/loveimg.png" alt="" class="spotlight">
-                <div class="text">
-                    <span><a target="_self" href="https://liulovyang.GitHub.io/writeing">Love Photo</a></span>
-                    <p>恋爱相册 记录最美瞬间</p>
-                </div>
-            </div>
-            <div class="card-b col-lg-6 col-12 col-sm-12 flex-h">
-                <img src="https://lovey.kikiw.cn/Style/img/xinf.png" alt="" class="spotlight">
-                <div class="text">
-                    <span><a target="_self" href="https://liulovyang.GitHub.io/things">Love List</a></span>
-                    <p>恋爱列表 你我之间的约定</p>
+            <div class="card col-lg-12 col-md-12 col-sm-12 col-sm-x-12">
+                <div class="list_texts animated bounceIn delay-03s">
+                    <div class="lovelist ">
+                                                    <li class="cike">
+                                                                <i class="iconfont icon-chenggong2 air"></i>                                 <span>一起备考</span>
+                                                            </li>
+                            <ul style="display: block;">
+                                <li>
+                                                                                                        </li>
+                            </ul>
+                                                        <li class="cike">
+                                <i class="iconfont icon-chenggong2 com"></i>                                                                 <span>一起上岸</span>
+                                                                    <svg class="icon" aria-hidden="true">
+                                        <use xlink:href="#icon-tupian"></use>
+                                    </svg>                            </li>
+                            <ul style="display: none;">
+                                <li>
+                                    <img data-original="https://img.gejiba.com/images/971597b446d7031e9c2df319d93b8b77.jpg" class="spotlight" src="https://img.gejiba.com/images/971597b446d7031e9c2df319d93b8b77.jpg" alt="">                                                                     </li>
+                            </ul>
+                                                </div>
                 </div>
             </div>
         </div>
     </div>
+    
+
 </div>
-
-
-<div id="pjax-container">
     
     
 
