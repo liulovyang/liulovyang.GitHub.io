@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>密码验证</title>
+    <title>密码验证（班主任姓名缩写）</title>
     <script>
         function validatePassword() {
             var password = document.getElementById("password").value;
-            if (password === "test") {
+            if (password === "hzp") {
                 window.location.href = "stu.html";
             } else {
                 alert("密码错误，请重试！");
@@ -16,7 +16,7 @@
     </script>
 </head>
 <body>
-    <h1>密码验证</h1>
+    <h1>密码验证（班主任姓名缩写）
     <form onsubmit="event.preventDefault(); validatePassword();">
         <label for="password">请输入密码：</label>
         <input type="password" id="password" name="password" required>
