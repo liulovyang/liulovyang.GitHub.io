@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新年祝福</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        canvas {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>新年快乐！</h1>
+        <p>愿你在新的一年里，幸福安康，万事如意！</p>
+    </div>
+    <canvas id="fireworksCanvas"></canvas>
+
+    <script>
+        // 简单的烟花效果脚本（省略详细实现，以保持简洁）
+        const canvas = document.getElementById('fireworksCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        function Firework() {
+            this.x = Math.random() * canvas.width;
+            this.y = canvas.height;
+            this.radius = Math.random() * 4 + 1;
+            this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            this.vy = Math.random() * -3 - 1;
+            this.alpha = 1;
+            this.decay = Math.random() * 0.03 + 0.02;
+        }
+
+        Firework.prototype.draw = function () {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+            ctx.fillStyle = this.color;
+            ctx.fill();
+            ctx.restore();
+        };
+
+        Firework.prototype.update = function () {
+            this.y += this.vy;
+            this.vy += this.decay;
+            this.alpha -= this.decay;
+        };
+
+        const fireworks = [];
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (Math.random() < 0.01) {
+                fireworks.push(new Firework());
+            }
+
+            fireworks.forEach((fw, index) => {
+                fw.draw();
+                fw.update();
+
+                if (fw.y < 0 || fw.alpha <= 0) {
+                    fireworks.splice(index, 1);
+                }
+            });
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        });
+    </script>
+</body>
+</html>
